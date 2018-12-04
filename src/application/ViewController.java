@@ -102,7 +102,7 @@ public class ViewController  implements Initializable  {
 				if(flag1 == 1) {
 					mediaPlayer.stop();
 				}
-				filePath = file.toURI().toString();
+				filePath = file.getPath();
 				mediaPlayer.prepareMedia(filePath);
 				mediaPlayer.play();
 //				Media media = new Media(filePath);	
@@ -116,7 +116,7 @@ public class ViewController  implements Initializable  {
 					
 	}else {
 		
-		System.out.println("nothing");
+		System.out.println("nothing119");
 	}
 	}
 	 @FXML
@@ -148,10 +148,10 @@ public class ViewController  implements Initializable  {
 		 if (dir != null) {
 			 listFile = dir.listFiles();
 			 lengthListFile = listFile.length; // lay chieu dai cua danh sach bai hat
-			 Media media = new Media(listFile[0].toURI().toASCIIString()); // lấy path của file đầu tiên làm mặc định
+			 //Media media = new Media(listFile[0].toURI().toASCIIString()); // lấy path của file đầu tiên làm mặc định
 			 if(flag != 1) {
 				 //mediaPlayer = new MediaPlayer(media);
-				 mediaPlayer.prepareMedia(listFile[0].toURI().toASCIIString());
+				 mediaPlayer.prepareMedia(listFile[0].getPath());
 				 //mediaShow.setMediaPlayer(mediaPlayer);
 			 }
 			 String m = "trang";
@@ -234,6 +234,3 @@ public class ViewController  implements Initializable  {
 		 }	 
 	 }
  }
-	 		
-
-
